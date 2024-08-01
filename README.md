@@ -15,7 +15,7 @@ You can access the live application here: [Blog App](https://alvins-blog-hub.onr
 ![Blog Post](blob:https://imgur.com/2857edd8-aa6f-43c7-acde-f37ea0f86ff4)
 
 ### Comment Section
-![Comments]([https://placeholder.com/comments-screenshot.png](https://i.imgur.com/N8alwi0.png))
+![Comments](https://i.imgur.com/N8alwi0.png)
 
 
 ## Features
