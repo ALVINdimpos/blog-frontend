@@ -14,7 +14,7 @@ This is a React-based frontend for a simple blog application. It allows users to
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/blog-frontend.git
+   git clone https://github.com/ALVINdimpos/blog-frontend.git
    cd blog-frontend
    ```
 
@@ -23,14 +23,7 @@ This is a React-based frontend for a simple blog application. It allows users to
    npm install
    ```
 
-3. Set up environment variables:
-   Create a `.env` file in the root directory and add the following:
-   ```
-   VITE_API_URL=https://your-backend-api-url.com
-   ```
-   Replace the URL with your actual backend API URL.
-
-4. Start the development server:
+3. Start the development server:
    ```
    npm run dev
    ```
@@ -47,11 +40,10 @@ This is a React-based frontend for a simple blog application. It allows users to
   - Read individual blog posts
   - Add comments to blog posts
 
-### Authorized User (Admin)
-- Email: auth@gmail.com
+### Author User
+- Email: author@gmail.com
 - Password: Password123
 - Permissions:
-  - All regular user permissions
   - Create new blog posts
   - Edit existing blog posts
   - Delete blog posts
@@ -78,7 +70,7 @@ This is a React-based frontend for a simple blog application. It allows users to
 
 5. **Creating a New Post**
    - Click "Create Post" in the navigation bar.
-   - Fill in the title and content, then click "Submit".
+   - Fill in the title and content, then click "Submit."
 
 6. **Editing a Post**
    - On a blog post page, click the "Edit" button.
@@ -86,13 +78,13 @@ This is a React-based frontend for a simple blog application. It allows users to
 
 7. **Deleting a Post**
    - On a blog post page, click the "Delete" button.
-   - Confirm the deletion when prompted.
+   - Could you confirm the deletion when prompted?
 
 ## Technology Stack
 
 - React
 - TypeScript
 - Vite
-- Redux Toolkit (for state management)
+- Redux Toolkit Query (for state management)
 - React Router (for routing)
 - Tailwind CSS (for styling)
