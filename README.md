@@ -2,6 +2,22 @@
 
 This is a React-based frontend for a simple blog application. It allows users to view blog posts, comment on them, and for authorized users, manage blog posts.
 
+## Hosted Application
+
+You can access the live application here: [Blog App](https://alvins-blog-hub.onrender.com/)
+
+## Screenshots
+
+### Home Page
+![Home Page](blob:https://imgur.com/9370b077-7612-4776-8cc0-82e498033059)
+
+### Blog Post View
+![Blog Post](blob:https://imgur.com/2857edd8-aa6f-43c7-acde-f37ea0f86ff4)
+
+### Comment Section
+![Comments]([https://placeholder.com/comments-screenshot.png](https://i.imgur.com/N8alwi0.png))
+
+
 ## Features
 
 - User authentication (login and registration)
@@ -28,7 +44,7 @@ This is a React-based frontend for a simple blog application. It allows users to
    npm run dev
    ```
 
-5. Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+4. Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
 
 ## User Types and Permissions
 
@@ -78,7 +94,7 @@ This is a React-based frontend for a simple blog application. It allows users to
 
 7. **Deleting a Post**
    - On a blog post page, click the "Delete" button.
-   - Could you confirm the deletion when prompted?
+   - Confirm the deletion when prompted.
 
 ## Technology Stack
 
