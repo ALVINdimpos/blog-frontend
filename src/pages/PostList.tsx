@@ -27,7 +27,7 @@ const PostList = () => {
               className="bg-white rounded-lg shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl"
             >
               <img
-                src={`https://source.unsplash.com/random/800x600?blog,${post.id}`}
+                src={`https://i.pravatar.cc/150?u=${post.id}`}
                 alt={post.title}
                 className="w-full h-48 object-cover"
               />

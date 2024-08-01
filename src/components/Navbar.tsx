@@ -15,12 +15,17 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ user }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.clear();
     navigate("/login");
     window.location.reload();
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -62,34 +67,39 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
                 </>
               )}
               {user && (
-                <div className="relative group">
-                  <button className="flex items-center space-x-2 text-white hover:text-indigo-200 transition-colors duration-200">
+                <div className="relative">
+                  <button
+                    className="flex items-center space-x-2 text-white hover:text-indigo-200 transition-colors duration-200"
+                    onClick={toggleDropdown}
+                  >
                     <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center">
                       {user.username[0].toUpperCase()}
                     </div>
                     <span>{user.username}</span>
                     <ChevronDown className="w-4 h-4" />
                   </button>
-                  <div className="absolute right-0 w-48 mt-2 py-2 bg-white rounded-md shadow-xl z-20 hidden group-hover:block">
-                    <Link
-                      to="/profile"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-500 hover:text-white"
-                    >
-                      Profile
-                    </Link>
-                    <Link
-                      to="/settings"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-500 hover:text-white"
-                    >
-                      Settings
-                    </Link>
-                    <button
-                      onClick={handleLogout}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-500 hover:text-white w-full text-left"
-                    >
-                      Logout
-                    </button>
-                  </div>
+                  {isDropdownOpen && (
+                    <div className="absolute right-0 w-48 mt-2 py-2 bg-white rounded-md shadow-xl z-20">
+                      <Link
+                        to="/profile"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-500 hover:text-white"
+                      >
+                        Profile
+                      </Link>
+                      <Link
+                        to="/settings"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-500 hover:text-white"
+                      >
+                        Settings
+                      </Link>
+                      <button
+                        onClick={handleLogout}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-500 hover:text-white w-full text-left"
+                      >
+                        Logout
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
