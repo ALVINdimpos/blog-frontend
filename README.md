@@ -9,10 +9,10 @@ You can access the live application here: [Blog App](https://alvins-blog-hub.onr
 ## Screenshots
 
 ### Home Page
-![Home Page](blob:https://imgur.com/9370b077-7612-4776-8cc0-82e498033059)
+![Home Page](https://i.imgur.com/rXvLfCw.png)
 
 ### Blog Post View
-![Blog Post](blob:https://imgur.com/2857edd8-aa6f-43c7-acde-f37ea0f86ff4)
+![Blog Post](https://i.imgur.com/lhjIXKc.png)
 
 ### Comment Section
 ![Comments](https://i.imgur.com/N8alwi0.png)
