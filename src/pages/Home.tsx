@@ -1,3 +1,4 @@
+import React from "react"; // Add this line
 import { motion } from "framer-motion";
 import { Button } from "../app/@/components/ui/button";
 import { PostList } from "./PostList";
