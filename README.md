@@ -1,30 +1,98 @@
-# React + TypeScript + Vite
+# Blog Frontend Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based frontend for a simple blog application. It allows users to view blog posts, comment on them, and for authorized users, manage blog posts.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (login and registration)
+- View list of blog posts
+- Read individual blog posts and their comments
+- Comment on blog posts (authenticated users only)
+- Create, edit, and delete blog posts (authorized users only)
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/blog-frontend.git
+   cd blog-frontend
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. Set up environment variables:
+   Create a `.env` file in the root directory and add the following:
+   ```
+   VITE_API_URL=https://your-backend-api-url.com
+   ```
+   Replace the URL with your actual backend API URL.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. Start the development server:
+   ```
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## User Types and Permissions
+
+### Regular User
+- Email: demouser@gmail.com
+- Password: Password123
+- Permissions:
+  - Browse all blog posts
+  - Read individual blog posts
+  - Add comments to blog posts
+
+### Authorized User (Admin)
+- Email: auth@gmail.com
+- Password: Password123
+- Permissions:
+  - All regular user permissions
+  - Create new blog posts
+  - Edit existing blog posts
+  - Delete blog posts
+
+## Usage
+
+1. **Viewing Blog Posts**
+   - The home page displays a list of all blog posts.
+   - Click on a blog post title to view its full content and comments.
+
+2. **Logging In**
+   - Click the "Login" button in the navigation bar.
+   - Enter your email and password.
+   - Use the credentials provided above for testing.
+
+3. **Adding Comments**
+   - When viewing a blog post, scroll to the bottom to find the comment section.
+   - If logged in, you can add a new comment using the comment form.
+
+4. **Managing Blog Posts (Authorized Users Only)**
+   - After logging in as an authorized user, you'll see additional options:
+     - "Create Post" button in the navigation bar
+     - "Edit" and "Delete" buttons on individual blog posts
+
+5. **Creating a New Post**
+   - Click "Create Post" in the navigation bar.
+   - Fill in the title and content, then click "Submit".
+
+6. **Editing a Post**
+   - On a blog post page, click the "Edit" button.
+   - Modify the title or content, then click "Save Changes".
+
+7. **Deleting a Post**
+   - On a blog post page, click the "Delete" button.
+   - Confirm the deletion when prompted.
+
+## Technology Stack
+
+- React
+- TypeScript
+- Vite
+- Redux Toolkit (for state management)
+- React Router (for routing)
+- Tailwind CSS (for styling)
